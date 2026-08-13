@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-navy: #061A3A;
+  --color-primary-blue: #073E91;
+  --color-primary-orange: #FF7200;
+  --color-secondary-orange: #F28C28;
+  --color-gray-text: #4B5563;
+  --color-white: #FFFFFF;
+  
+  --font-sans: var(--font-poppins), "Poppins", Arial, Helvetica, sans-serif;
+  --font-display: var(--font-poppins), "Poppins", Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  background-color: #F5F7FA;
+  color: #111827;
+  font-family: var(--font-sans);
+}
+
+/* Accessibility outline */
+*:focus-visible {
+  outline: 3px solid #FF7200;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar on scroll-reduced animation settings */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Standardized Custom CSS Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+h1, .tp1--headline1 {
+  font-size: 40px !important;
+  letter-spacing: -0.015em !important;
+}
+
+h1, h2, h3, h4, h5, h6, .tp1--headline1 {
+  font-family: var(--font-poppins), "Poppins", Arial, Helvetica, sans-serif !important;
+  font-weight: 500 !important;
+}
+
+@media screen and (min-width: 1220px) {
+  .tp1-desk--headline1, h2 {
+     font-size: 48px !important;
+     line-height: 54px !important;
+     font-weight: 500 !important;
+     letter-spacing: -1.5px !important;
+  }
+}
+
+.tp1--display {
+  font-size: 20px !important;
+  font-family: var(--font-poppins), "Poppins", Arial, Helvetica, sans-serif !important;
+  margin-top: 16px !important;
+}
+
+/* Marquee Animation for Financial Institutions Carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+/* Marquee Reverse Animation */
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 25s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-reverse {
+    animation: none !important;
+  }
+}
+
+
