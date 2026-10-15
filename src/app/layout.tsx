@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'WTWsA8nJP92P9fbwGSOhXDT7UOjTLijgShEP-26jI6w',
+  },
   icons: {
     icon: [
       { url: '/fiveicon.png', type: 'image/png' },
@@ -66,6 +69,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${poppins.variable} h-full scroll-smooth antialiased`}>
       <head>
+        <meta name="google-site-verification" content="WTWsA8nJP92P9fbwGSOhXDT7UOjTLijgShEP-26jI6w" />
         <OrganizationJsonLd />
         {trackingConfig.gtmId && (
           <script
