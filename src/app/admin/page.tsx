@@ -15,7 +15,20 @@ export default function AdminDashboard() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Link href="/admin/leads" className="bg-white p-6 rounded-xl shadow-sm border-2 border-primary-orange/40 hover:border-primary-orange transition-all group relative overflow-hidden">
+          <div className="absolute top-0 right-0 bg-primary-orange text-white text-[10px] font-bold px-2 py-0.5 rounded-bl">
+            NOVO
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-orange mb-2 flex items-center gap-1.5">
+            <span>Leads & Simulações</span>
+            <span>🚀</span>
+          </h3>
+          <p className="text-sm text-gray-600">
+            Acesse todos os contatos que preencheram o formulário no site e inicie atendimento no WhatsApp.
+          </p>
+        </Link>
+
         <Link href="/admin/configuracoes" className="bg-white p-6 rounded-xl shadow-sm border border-gray-150 hover:border-primary-orange transition-colors group">
           <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary-orange mb-2">Configurações Gerais</h3>
           <p className="text-sm text-gray-600">
